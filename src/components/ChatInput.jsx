@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Chatbot } from "supersimpledev";
+import Chatbot from "./chatbot.js";
 import "./ChatInput.css";
 
 export function ChatInput({ chatMessages, setChatMessages }){
@@ -43,6 +43,12 @@ export function ChatInput({ chatMessages, setChatMessages }){
         size="30"
         onChange={saveInputText}
         value={inputText}
+        onKeyDown={(e) => {
+          if(e.key === "Enter"){
+            e.preventDefault();
+            sendMessage();
+          }
+        }} 
       />
       <button
         onClick={sendMessage}

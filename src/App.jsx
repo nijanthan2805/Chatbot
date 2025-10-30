@@ -6,23 +6,7 @@ import "./App.css";
 function App() {
 
   //State - When we update this data it will upate the html with the help of State 
-  const [chatMessages, setChatMessages] = useState([{ //Array Deconstructing
-    message : "hello chatbot",
-    sender : "user",
-    id : "id1"
-  }, {
-    message : "Hello! How can I help you?",
-    sender : "robot",
-    id : "id2" 
-  }, {
-    message : "whats the date today",
-    sender : "user",
-    id : "id3" 
-  }, {
-    message : "Today is October 7",
-    sender :"robot",
-    id : "id4"
-  }]);
+  const [chatMessages, setChatMessages] = useState([]);
   // const chatMessages = array[0]; //Current Data
   // const setChatMessages =array[1]; //Updater Function
 
